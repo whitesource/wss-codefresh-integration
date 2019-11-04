@@ -39,7 +39,7 @@ echo ""
 
 DIRECTORY=${DIRECTORY:="."}
 API_KEY=${API_KEY}
-CONFIG_FILE_PATH=${CONFIG_FILE_PATH:="./wss-unified-agent.config"}
+CONFIG_FILE_PATH=${CONFIG_FILE_PATH:="wss-unified-agent.config"}
 
 if [[ -z "${API_KEY}" ]]; then
     bash <(curl -s -L https://github.com/whitesource/unified-agent-distribution/raw/master/standAlone/wss_agent_scanner.sh) -c "${CONFIG_FILE_PATH}" -d "${DIRECTORY}"
