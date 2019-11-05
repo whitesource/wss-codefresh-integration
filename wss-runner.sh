@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo "echo printing env"
+env
 echo ""
 LOCAL_INSTALL_FILE="install-commands.sh"
 echo "*******************************************************************************************************************"
