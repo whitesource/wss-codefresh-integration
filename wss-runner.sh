@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo ""
+echo "start wss"
 LOCAL_INSTALL_FILE="install-commands.sh"
 echo "*******************************************************************************************************************"
 echo "                          Start Executing Commands File"
