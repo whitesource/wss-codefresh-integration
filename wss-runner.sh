@@ -43,9 +43,9 @@ API_KEY=${API_KEY}
 CONFIG_FILE_PATH=${CONFIG_FILE_PATH:="wss-unified-agent.config"}
 
 if [[ -z "${API_KEY}" ]]; then
-    bash <(curl -s -L https://github.com/whitesource/unified-agent-distribution/raw/master/standAlone/wss_agent_scanner.sh) -c "${CONFIG_FILE_PATH}" -d "${DIRECTORY}"
+    bash <(run_latest_jar.sh) -c "${CONFIG_FILE_PATH}" -d "${DIRECTORY}"
 else
-    bash <(curl -s -L https://github.com/whitesource/unified-agent-distribution/raw/master/standAlone/wss_agent_scanner.sh) -apiKey "${API_KEY}" -c "${CONFIG_FILE_PATH}" -d "${DIRECTORY}"
+    bash <(run_latest_jar.sh) -apiKey "${API_KEY}" -c "${CONFIG_FILE_PATH}" -d "${DIRECTORY}"
 fi
 
 echo ""
