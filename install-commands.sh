@@ -5,7 +5,6 @@
 # Upon starting "whitesource-scan" container these commands will be executed to align the environment
 # with all required packages and libraries.
 
-
 #-----------------------------------------------------------------------------------------------------
 #                                    EXAMPLE
 #-----------------------------------------------------------------------------------------------------
