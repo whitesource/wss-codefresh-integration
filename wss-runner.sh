@@ -28,10 +28,14 @@ echo "**************************************************************************
 echo "				Start Running WhiteSource Unified Agent       "
 echo "*******************************************************************************************************************"
 echo ""
-
+echo "ls"
+ls
+echo "codefreshtest"
+ls codefreshtest
+ls /codefreshtest
 DIRECTORY=${DIRECTORY:="."}
 API_KEY=${API_KEY}
-CONFIG_FILE_PATH=${CONFIG_FILE_PATH:="/codefresh/volume/wss-unified-agent.config"}
+CONFIG_FILE_PATH=${CONFIG_FILE_PATH:="wss-unified-agent.config"}
 
 if [[ -z "${API_KEY}" ]]; then
     ./wss-scan/run_latest_jar.sh -c "${CONFIG_FILE_PATH}" -d "${DIRECTORY}"
