@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM whitesourcesoftware/ua-base:v1
 RUN mkdir /wss-scan
 COPY wss-runner.sh /wss-scan
 COPY run_latest_jar.sh /wss-scan
