@@ -38,7 +38,6 @@ if [[ -z "${API_KEY}" ]]; then
 else
     ./wss-scan/run_latest_jar.sh -apiKey "${API_KEY}" -c "${CONFIG_FILE_PATH}" -d "${DIRECTORY}"
 fi
-
 echo ""
 echo "*******************************************************************************************************************"
 echo "				Finish Running WhiteSource Unified Agent       "
