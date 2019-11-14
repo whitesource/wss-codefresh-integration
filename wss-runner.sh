@@ -30,7 +30,7 @@ echo "				Start Running WhiteSource Unified Agent       "
 echo "*******************************************************************************************************************"
 echo ""
 
-PROJECT_DIRECTORY=${PROJECT_DIRECTORY:="."}
+PROJECT_DIRECTORY=${PROJECT_DIRECTORY:=""}
 API_KEY=${API_KEY}
 CONFIG_FILE=${CONFIG_FILE:="wss-unified-agent.config"}
 
