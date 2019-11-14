@@ -34,16 +34,10 @@ PROJECT_DIRECTORY=${PROJECT_DIRECTORY:="."}
 API_KEY=${API_KEY}
 CONFIG_FILE=${CONFIG_FILE:="wss-unified-agent.config"}
 
-echo "Copying project directory and config file from codefresh/volume to image"
-cd /wss-scan
-mkdir ${PROJECT_DIRECTORY}
-cp ../codefresh/volume/${PROJECT_DIRECTORY}/* ${PROJECT_DIRECTORY}
-cp ../codefresh/volume/${CONFIG_FILE} /wss-scan/${CONFIG_FILE}
-
 if [[ -z "${API_KEY}" ]]; then
     /wss-scan/run_latest_jar.sh -c "${CONFIG_FILE}" -d "${PROJECT_DIRECTORY}"
 else
-    /wss-scan/run_latest_jar.sh -apiKey "${API_KEY}" -c "/wss-scan/${CONFIG_FILE}" -d "/wss-scan/${PROJECT_DIRECTORY}"
+    /wss-scan/run_latest_jar.sh -apiKey "${API_KEY}" -c "${CONFIG_FILE}" -d "${PROJECT_DIRECTORY}"
 fi
 echo ""
 echo "*******************************************************************************************************************"
