@@ -30,14 +30,14 @@ echo "				Start Running WhiteSource Unified Agent       "
 echo "*******************************************************************************************************************"
 echo ""
 
-PROJECT_DIRECTORY=${PROJECT_DIRECTORY:=""}
+PROJECT_DIRECTORY=${PROJECT_DIRECTORY:="."}
 API_KEY=${API_KEY}
 CONFIG_FILE=${CONFIG_FILE:="wss-unified-agent.config"}
 
 if [[ -z "${API_KEY}" ]]; then
-    /run_latest_jar.sh -c ../"${CONFIG_FILE}" -d ../"${PROJECT_DIRECTORY}"
+    ./run_latest_jar.sh -c "${CONFIG_FILE}" -d "${PROJECT_DIRECTORY}"
 else
-    /run_latest_jar.sh -apiKey "${API_KEY}" -c ../"${CONFIG_FILE}" -d ../"${PROJECT_DIRECTORY}"
+    ./run_latest_jar.sh -apiKey "${API_KEY}" -c "${CONFIG_FILE}" -d "${PROJECT_DIRECTORY}"
 fi
 echo ""
 echo "*******************************************************************************************************************"
